@@ -6,4 +6,8 @@ I took about 2 hours to complete as it took me a bit to understand how the api w
 
 for example: when an invalid variable is given for language, the program requests the user for the input again.
 
-If i had more time i would probably make it so the program loops again after providing a quote rather then exiting out and making it so the input would identify alternate values(ex: english, eng) as equivilant valid variables to accepted inputs(EN)
+Changes i would make with additional time:
+-Looping program to request a new input from user once outputting a quote
+-Add additional unit testing
+-Add checks for user input
+-Better exception handling for api call
