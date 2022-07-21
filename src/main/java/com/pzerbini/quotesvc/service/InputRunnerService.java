@@ -16,10 +16,12 @@ public class InputRunnerService implements CommandLineRunner {
     //Scans user input and then invokes the QuoteGeneratorService class to invoke the API
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Please enter en for English or ru for Russian: ");
-
         Scanner scanner = new Scanner(System.in);
-        String userLanguage = scanner.nextLine();
+        String userLanguage;
+        do {
+            System.out.println("Please enter en for English or ru for Russian: ");
+            userLanguage = scanner.nextLine();
+        } while (!(userLanguage.equalsIgnoreCase("en") || userLanguage.equalsIgnoreCase("ru")));
 
         System.out.println("User has selected " + userLanguage);
         getQuoteService.getQuote(userLanguage);
